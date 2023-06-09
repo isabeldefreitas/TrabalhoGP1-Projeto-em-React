@@ -12,11 +12,20 @@ na disciplina.
 
 ## Autores
 
-- [@luizitosuares](https://www.github.com/luizitosuares)
-
 - [@isabeldefreitas](https://github.com/isabeldefreitas)
 
+- [@larissrosa](https://github.com/larissrosa)
+
+- [@lf-hammes](https://github.com/lf-hammes)
+
+- [@luizitosuares](https://www.github.com/luizitosuares)
+
 - [@MarianeSMagalhaes](https://github.com/MarianeSMagalhaes)
+
+
+
+
+
 
 
 ## Stack utilizada
