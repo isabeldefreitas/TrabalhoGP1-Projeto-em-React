@@ -1,6 +1,6 @@
 # TrabalhoGP1_Projeto em React - Serratec 2023.1
 
-O trabalho final da disciplina de Desenvolvimento Web foi promover o desenvolvimento de um
+O trabalho final da disciplina de Desenvolvimento Web: Desenvolvimento de um
 pequeno E-commerce utilizando tópicos apresentados e desenvolvidos
 na disciplina.
 
