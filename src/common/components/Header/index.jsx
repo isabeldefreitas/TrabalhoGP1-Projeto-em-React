@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate, Outlet } from "react-router-dom";
 import { BiMicrochip, BiSearchAlt2, BiShoppingBag } from "react-icons/bi";
 
-import "./header.css";
+import { Container, Logo } from "./styles";
 
 
 export const Navbar = () => {
@@ -19,19 +19,13 @@ export const Navbar = () => {
     };
 
     return (
-        <>
-            <nav id="navbar">
-                <h2>
+        <Container>
+            
+                <Logo>
                     <Link to="/">
                         <BiMicrochip /> HardwareTech
                     </Link>
-                </h2>
-                <h2>
-                    <Link to="/">
-                        <BiShoppingBag />
-                    </Link>
-                </h2>
-
+                </Logo>
                 <form onSubmit={handleSubmit}>
                     <input
                         type="text"
@@ -43,9 +37,15 @@ export const Navbar = () => {
                         <BiSearchAlt2 />
                     </button>
                 </form>
-            </nav>
+                <div>
+                    <Link to="/">
+                        <BiShoppingBag />
+                    </Link>
+                </div>
+
+          
             <Outlet />
-        </>
+        </Container>
     );
 };
 
