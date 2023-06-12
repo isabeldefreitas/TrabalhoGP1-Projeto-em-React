@@ -1,0 +1,191 @@
+Footer {
+    width: 100%;
+    background-color:"#FF0000"
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+    margin-top: 20px;
+    position: r;
+  }
+  
+  footer div {  
+    width: 25%;
+  }
+  
+  h3 {
+    font-size: 25px;
+  }
+  
+  .participantes {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .participantes li {
+    transition: .3s;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+  }
+  
+  .participantes div {
+    display: flex;
+    justify-content: flex-start;
+    width: 70%;
+  }
+  
+  .participantes a {
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 5px;
+    cursor: pointer;
+    text-align: right;
+  }
+  
+  .participantes a:hover {
+    text-decoration: underline;
+  }
+  
+  .participantes img{
+    border-radius: 50%;
+    width: 23px;
+    display: flex;
+  }
+  
+  .contatos {
+    border-left: 1px solid #5c5a5a;
+    border-right: 1px solid #5c5a5a;
+    padding: 0 10px;
+    text-align: center;
+  }
+  
+  .redes {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+  }
+  
+  .redes ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+    padding: 5px;
+  }
+  
+  .redes ul img {
+    width: 40px;
+    background: rgba(255, 255, 255, 0.767);
+    border-radius: 50%;
+    padding: 1px;
+  }
+  
+  .newsletter {
+    display: flex;
+    align-items: flex-start; 
+    flex-direction: column;
+    
+  }
+  
+  .newsletter form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  
+  footer input {
+    background: #0000002d;
+    border: 1px solid transparent;
+    color: #fff;
+    padding: 10px 10px;
+    border-radius: 10px 0 0 10px;
+    border-right: none;
+    width: 100%;
+    
+  }
+  
+  footer button {
+    
+    background: transparent;
+    border: 1px solid transparent;
+    color: #fff;
+    border-radius: 0 10px 10px 0;
+    padding: 5px 5px;
+    font-weight: bold;
+    transition: .3s;
+    cursor: pointer;
+  }
+  
+  footer button:hover {
+    background: #fff;
+    color:rgb(31, 29, 29);
+  }
+  
+  @media only screen and (max-width: 1090px) {
+    .participantes img {
+      display: none;
+    }
+  
+    .participantes div {
+      width: 100%;
+      
+    }
+  
+    .participantes div a {
+      text-align: left;
+      width: 100%;
+    }
+  }
+  
+  @media only screen and (max-width: 780px) {
+    footer {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    footer div {
+      width: 90%;
+      margin: 10px auto;
+    }
+  
+    h3 {
+      font-size: 20px;
+    }
+  
+    .contatos {
+      border: none;
+      border-top: 1px solid #5c5a5a;
+      border-bottom: 1px solid #5c5a5a;
+      padding: 10px 10px;
+      text-align: center;
+    }
+  
+    .participantes li{
+      width: 100%;
+      justify-content: center;
+      font-size: 10px;
+    }
+  
+    .participantes div {
+      margin: 0;
+      width: 40%;
+      margin-left: 10px;
+    }
+  
+    .participantes div a {
+      text-align: center;
+      width: 100%;
+    }
+  
+    .newsletter button{
+      margin-left: 1px;
+      
+    }
+    
+  }
