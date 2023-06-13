@@ -5,6 +5,8 @@ import { Navbar } from "../../common/components/Header";
 import { Footer } from "../../common/components/Footer";
 import { MenuHamburguer } from "../../common/components/MenuHamburguer";
 import * as Styles from "./style";
+import Card from "react-bootstrap/Card"
+import Button from "react-bootstrap/Button"
 
 
 
@@ -50,16 +52,21 @@ export function Home() {
       </Styles.Banner>
       <Styles.Content>
         {users.map((res) => {
-          return (
-
-            <div key={res.idProduto}>
-              <img src={`data:image/jpeg;base64,${res.imagem}`} width="170px" height="110px" />
-              <a>{res.nome}</a>
-              <a>{res.descricao}</a>
-            </div>
-
-          )
-        })}
+         return (
+            
+<div key={res.idProduto}>
+        <Card style={{ width: '18rem' }}>
+      <Card.Img variant="top" src={`data:image/jpeg;base64,${res.imagem}`} width="170px" height="110px" />
+      <Card.Body>
+        <Card.Title>{res.nome}</Card.Title>
+        <Card.Text>
+        {res.descricao}
+        </Card.Text>
+        <Button variant="primary">Go somewhere</Button>
+      </Card.Body>
+    </Card>
+    </div> )
+    })}
          <Footer />
       </Styles.Content>
 
