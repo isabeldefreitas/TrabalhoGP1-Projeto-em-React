@@ -5,14 +5,19 @@ import { Navbar } from "../../common/components/Header";
 import { Footer } from "../../common/components/Footer";
 import { MenuHamburguer } from "../../common/components/MenuHamburguer";
 import * as Styles from "./style";
+
+
+
 export function Home() {
   const [users, setUsers] = useState([]);
   const [menuIsVisible, setMenuIsVisible] = useState(false);
 
   useEffect(() => {
     async function fetchData() {
-      const { data: ghUsers } = await api.get("/users");
-      setUsers(ghUsers);
+      
+      const ghUsers  = await api.get("/produtos");
+      console.log(ghUsers.data);
+      setUsers(ghUsers.data);
     }
 
     fetchData();
@@ -46,9 +51,16 @@ export function Home() {
       <Styles.Content>
         {/* Aqui vai todo o conteúdo da página home */}
       </Styles.Content>
-      {users.map((user) => {
-        return <h3 key={user.id}>{user.login}</h3>;
-      })}
+        {users.map((res)=>{
+          return(
+            
+              <div key= {res.idProduto}>
+                <a>{res.nome}</a>
+                <a>{res.descricao}</a>
+              </div>
+            
+          )
+        })}
       <Footer />
     </>
   );
