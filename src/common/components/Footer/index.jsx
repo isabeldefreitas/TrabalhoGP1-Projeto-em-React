@@ -11,15 +11,6 @@ export function Footer() {
         <ul>
           <li>
             <img
-              src="https://avatars.githubusercontent.com/u/127349111?v=4"
-              alt="Foto Cristian"
-            />
-            <div>
-              <a href="https://github.com/CrystianKelmer">Luis</a>
-            </div>
-          </li>
-          <li>
-            <img
               src="https://avatars.githubusercontent.com/u/127349167?v=4"
               alt="Foto Mariane"
             />
@@ -29,20 +20,38 @@ export function Footer() {
           </li>
           <li>
             <img
-              src="https://media.licdn.com/dms/image/C4D03AQFdqBoduagqdA/profile-displayphoto-shrink_200_200/0/1660261926494?e=1688601600&v=beta&t=A2YEC5nppaXwjuiVA0TYr01uMgBkTXCENjrGhUNUMhg"
-              alt="Foto Luiz Otávio"
+              src="https://avatars.githubusercontent.com/u/127349333?v=4"
+              alt="Foto Isabel"
             />
             <div>
-              <a href="https://www.github.com/luizitosuares">Luiz Otávio</a>
+              <a href="https://github.com/isabeldefreitas">Isabel de Freitas</a>
             </div>
           </li>
           <li>
             <img
-              src="https://avatars.githubusercontent.com/u/127349333?v=4"
-              alt="Foto de Isabel"
+              src="https://avatars.githubusercontent.com/u/127329662?v=4"
+              alt="Foto Larissa"
             />
             <div>
-              <a href="https://github.com/isabeldefreitas">Isabel de Freitas</a>
+              <a href="https://github.com/larissrosa">Larissa Rosa</a>
+            </div>
+          </li>
+          <li>
+            <img
+              src="https://avatars.githubusercontent.com/u/127352528?v=4"
+              alt="Foto Luis"
+            />
+            <div>
+              <a href="https://github.com/lf-hammes">Luis Felipe</a>
+            </div>
+          </li>
+          <li>
+            <img
+              src="https://avatars.githubusercontent.com/u/127349318?v=4"
+              alt="Foto Luiz Otávio"
+            />
+            <div>
+              <a href="https://www.github.com/luizitosuares">Luiz Otávio</a>
             </div>
           </li>
         </ul>
