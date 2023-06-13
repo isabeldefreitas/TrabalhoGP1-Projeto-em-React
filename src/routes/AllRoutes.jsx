@@ -1,7 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Home } from "../pages/Home";
 import { AddProduct } from "../pages/AddProduct";
-import { Login } from "../pages/Login";
+import { LoginCliente } from "../pages/LoginCliente";
+// import { LoginFuncionario } from "../pages/LoginFuncionario";
 import { Navbar} from "../common/components/Header";
 
 import { Footer } from "../common/components/Footer";
@@ -16,7 +17,7 @@ export function AllRoutes() {
                         <Route Component={AddProduct} path="/create" />
                     </Route>
                 </Route>
-                <Route Component={Login} path="/login" />
+                <Route Component={LoginCliente} path="/loginCliente" />
             </Routes>
         </BrowserRouter>
     )
