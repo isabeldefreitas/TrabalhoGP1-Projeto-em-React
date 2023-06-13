@@ -58,19 +58,19 @@ export function Footer() {
       </Participantes>
       <Contatos>
         <h3>Contatos</h3>
-        <p>Telefone: (24) 2222-22222</p>
+        <p>Telefone: (24) 2222-2222</p>
         <p>
-          Email: <a href="hardwareTech@email.com">HardwareTech</a>
+          E-mail: <a href="hardwareTec@email.com">HardwareTec</a>
         </p>
         <div className="redes"></div>
       </Contatos>
       <NewsLetter>
-        <h3>Se inscreva na nossa newsletter:</h3>
+        <h3>Ou deixe seu e-mail para entrarmos em contato</h3>
         <form action="#">
           <input
             type="email"
             name="email"
-            placeholder="Deixe seu melhor e-mail"
+            placeholder="Deixe aqui o seu e-mail"
           />
           <button>Enviar</button>
         </form>
