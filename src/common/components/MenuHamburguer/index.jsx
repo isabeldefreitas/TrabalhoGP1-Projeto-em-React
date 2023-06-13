@@ -6,10 +6,9 @@ export const MenuHamburguer = () => {
     <>
       <Styles.Menu>
         <ul>
-          <li>Opção </li>
-          <li>Opção </li>
-          <li>Opção </li>
-          <li>Opção </li>
+          <li>Entrada e saída</li>
+          
+          <li>Processamento e armazenamento</li>
         </ul>
       </Styles.Menu>
     </>

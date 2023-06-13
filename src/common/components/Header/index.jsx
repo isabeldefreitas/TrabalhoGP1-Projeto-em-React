@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { BiMicrochip, BiSearchAlt2, BiShoppingBag } from "react-icons/bi";
+import { BiMenu, BiMicrochip, BiSearchAlt2, BiShoppingBag } from "react-icons/bi";
 
 import { Button, Container, Form, Input, Item, Logo } from "./styles";
 
@@ -20,9 +20,7 @@ export const Navbar = ({funcao}) => {
   return (
     <Container>
       <Logo>
-        <button onClick={() => funcao()}>
-          <BiMicrochip /> HardwareTech
-        </button>
+          <BiMicrochip /> HardwareTec
       </Logo>
       <Form onSubmit={handleSubmit}>
         <Input
@@ -39,6 +37,15 @@ export const Navbar = ({funcao}) => {
         <Link to="/">
           <BiShoppingBag />
         </Link>
+      </Item>
+      <Item>
+      <Logo>
+        <button onClick={() => funcao()}>
+        <Link to="/">
+          <BiMenu />
+        </Link>
+        </button>
+      </Logo>
       </Item>
 
       {/* <Outlet /> */}
