@@ -24,4 +24,19 @@ export const GlobalStyle = createGlobalStyle`
         text-decoration: none;
         color: inherit;
     }
+
+    grid-template-columns: repeat(5, 1fr);
+    @media (max-width: 1612px) {
+      grid-template-columns: repeat(4, 1fr);   
+    }  
+    @media (max-width: 1512px) {
+      grid-template-columns: repeat(3, 1fr);   
+    }  
+    @media (max-width: 1050px) {
+      grid-template-columns: repeat(2, 1fr);
+    }  
+    @media (max-width: 680px) {
+      grid-template-columns: repeat(1, 1fr);
+    }  
+      cursor: pointer;
 `;

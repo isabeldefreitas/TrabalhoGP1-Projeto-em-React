@@ -14,8 +14,8 @@ export function Home() {
 
   useEffect(() => {
     async function fetchData() {
-      
-      const ghUsers  = await api.get("/produtos");
+
+      const ghUsers = await api.get("/produtos");
       console.log(ghUsers.data);
       setUsers(ghUsers.data);
     }
@@ -49,19 +49,21 @@ export function Home() {
         />
       </Styles.Banner>
       <Styles.Content>
-        {/* Aqui vai todo o conteúdo da página home */}
-      </Styles.Content>
-        {users.map((res)=>{
-          return(
-            
-              <div key= {res.idProduto}>
-                <a>{res.nome}</a>
-                <a>{res.descricao}</a>
-              </div>
-            
+        {users.map((res) => {
+          return (
+
+            <div key={res.idProduto}>
+              <img src={`data:image/jpeg;base64,${res.imagem}`} width="170px" height="110px" />
+              <a>{res.nome}</a>
+              <a>{res.descricao}</a>
+            </div>
+
           )
         })}
-      <Footer />
+         <Footer />
+      </Styles.Content>
+
+     
     </>
   );
 }
