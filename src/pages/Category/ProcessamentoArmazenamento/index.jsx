@@ -58,7 +58,7 @@ export function ProcessamentoArmazenamento() {
 
                   <Card.Text>
                     <h2>R${res.valorUnitario}</h2>
-                    <Button style={{ marginTop: '10px', width: '100%' }} variant="primary">Adicionar ao carrinho</Button>
+                    <Button style={{ marginTop: '10px', width: '100%', backgroundColor: '#9370DB ', border: '#9370DB' }} variant="primary">Adicionar ao carrinho</Button>
                   </Card.Text>
 
                 </Card.Body>
