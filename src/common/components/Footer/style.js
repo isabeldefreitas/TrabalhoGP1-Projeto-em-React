@@ -13,6 +13,11 @@ export const Container = styled.div`
   bottom: 0;
   position: relative;
   margin-top: 20px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 20px;
+  }
 `;
 
 export const Participantes = styled.div`
@@ -42,6 +47,10 @@ export const Participantes = styled.div`
     margin-bottom: 10px;
     align-items: center;
   }
+
+  @media (max-width: 768px) {
+    margin-bottom: 20px;
+  }
 `;
 
 export const Contatos = styled.div`
@@ -49,10 +58,20 @@ export const Contatos = styled.div`
   border-right: 1px solid #5c5a5a;
   padding: 0 10px;
   text-align: center;
+
+  @media (max-width: 768px) {
+    border: none;
+    padding: 0;
+    margin-bottom: 20px;
+  }
 `;
 
 export const NewsLetter = styled.div`
   display: flex;
   align-items: flex-start;
   flex-direction: column;
+
+  @media (max-width: 768px) {
+    align-items: center;
+  }
 `;

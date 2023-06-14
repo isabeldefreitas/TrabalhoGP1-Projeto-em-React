@@ -9,7 +9,7 @@ import Card from "react-bootstrap/Card"
 import Button from "react-bootstrap/Button"
 import { Loader } from "../../common/components/Loader";
 import { GlobalStyle } from '../../common/style/global';
-
+import {Link} from 'react-router-dom'
 
 export function Home() {
   const [users, setUsers] = useState([]);
@@ -63,7 +63,10 @@ export function Home() {
 
                   <Card.Text>
                     <h2>R${res.valorUnitario}</h2>
+                    <Link to="/bag">
                     <Button style={{ marginTop: '10px', width: '100%', backgroundColor: '#9370DB ', border: '#9370DB' }} variant="primary">Adicionar ao carrinho</Button>
+                    </Link>
+                    
                   </Card.Text>
 
                 </Card.Body>
