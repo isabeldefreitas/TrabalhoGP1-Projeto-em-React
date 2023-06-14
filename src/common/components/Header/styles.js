@@ -11,7 +11,7 @@ export const Container = styled.div`
   z-index: 1;
 
   @media (max-width: 768px) {
-    flex-direction: column;
+    flex-direction: row;
     height: auto;
     padding: 10px;
   }
@@ -43,7 +43,7 @@ export const Input = styled.input`
   border: none;
 
   @media (max-width: 768px) {
-    width: 100%;
+    display: none;
   }
 `;
 
