@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
-  height: 300px;
+  height: auto;
   background-color: #121212;
   color: #fff;
   display: flex;
@@ -10,6 +10,9 @@ export const Container = styled.div`
   justify-content: space-around;
   align-items: center;
   padding: 50px;
+  bottom: 0;
+  position: relative;
+  margin-top: 20px;
 `;
 
 export const Participantes = styled.div`
@@ -17,16 +20,27 @@ export const Participantes = styled.div`
   flex-direction: column;
 
   img {
-    width: 40px;
+    width: 50px;
     background: rgba(255, 255, 255, 0.767);
     border-radius: 50%;
     padding: 1px;
+    margin-right: 5px;
   }
 
   a {
     :hover {
       text-decoration: underline;
     }
+  }
+
+  h3 {
+    margin-bottom: 10px;
+  }
+
+  li {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
   }
 `;
 

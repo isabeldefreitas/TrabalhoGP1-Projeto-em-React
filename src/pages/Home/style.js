@@ -8,7 +8,8 @@ export const Banner = styled.div`
 
 export const Content = styled.div`
   width: 100%;
-  height: 600px;
+  min-height: 600px;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;

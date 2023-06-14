@@ -51,7 +51,7 @@ export function Home() {
         />
       </Styles.Banner>
       <Styles.Content>
-      {users.map((res) => {
+        {users.map((res) => {
           return (
             <div key={res.idProduto} style={{ marginTop: '20px' }}>
               <Card style={{ width: '18rem', height: '528px' }}>
@@ -74,9 +74,8 @@ export function Home() {
             </div>
           )
         })}
-        <Footer />
       </Styles.Content>
-
+      <Footer />
 
     </>
   );
