@@ -6,6 +6,9 @@ import { MenuItem } from './MenuItem'
 import { 
   FaTimes, 
   FaHome,
+  FaUserInjured,
+  FaMouse,
+  FaLaptop
 } from 'react-icons/fa'
 
 export const MenuHamburguer = ({ active }) => {
@@ -15,9 +18,12 @@ export const MenuHamburguer = ({ active }) => {
   }
 
   const menuOptions = [
+
     {icon: FaHome, name: "Home", LinkToPath: "/"},
-    {icon: FaHome, name: "Entrada e saída", LinkToPath: "/entrada-saida"},
-    {icon: FaHome, name: "Processamento e armazenamento", LinkToPath: "/proc-armz"},
+    {icon: FaUserInjured, name: "Login", LinkToPath: "/login"},
+    {icon: FaMouse, name: "Entrada e saída", LinkToPath: "/entradaesaida"},
+    {icon: FaLaptop, name: "Processamento", LinkToPath: "/processamentoarmazenamento"},
+    
   ]
 
   return (

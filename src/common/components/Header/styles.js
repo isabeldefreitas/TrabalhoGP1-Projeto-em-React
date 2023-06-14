@@ -7,6 +7,8 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  z-index: 1;
 `;
 export const Logo = styled.h2`
   color: #fff;

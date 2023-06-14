@@ -10,7 +10,7 @@ export function Login() {
       <div className="form-row">
         <FormGroup className="form-group col-md-6">
           <Label htmlFor="inputEmail4">Username</Label>
-          <Input type="email" className="form-control" id="inputEmail4" placeholder="Email" />
+          <Input type="email" className="form-control" id="inputEmail4" placeholder="username" />
         </FormGroup>
         <FormGroup className="form-group col-md-6">
           <Label htmlFor="inputPassword4">Senha</Label>

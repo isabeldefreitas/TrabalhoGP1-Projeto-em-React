@@ -6,6 +6,8 @@ export const Form = styled.form`
   align-items: center;
   flex-direction: column;
   gap: 17px;
+  padding: 190px 0;
+  
 
 `;
 
