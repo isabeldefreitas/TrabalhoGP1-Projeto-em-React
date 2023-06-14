@@ -51,28 +51,33 @@ export function Home() {
         />
       </Styles.Banner>
       <Styles.Content>
-        {users.map((res) => {
-         return (
-            
-<div key={res.idProduto}>
-        <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={`data:image/jpeg;base64,${res.imagem}`} width="170px" height="110px" />
-      <Card.Body>
-        <Card.Title>{res.nome}</Card.Title>
-        
-        <Card.Text>
-        {res.descricao}
-        <h2>{res.valorUnitario}</h2>
-        </Card.Text>
-        <Button variant="primary">Adicionar ao carrinho</Button>
-      </Card.Body>
-    </Card>
-    </div> )
-    })}
-         <Footer />
+      {users.map((res) => {
+          return (
+            <div key={res.idProduto} style={{ marginTop: '20px' }}>
+              <Card style={{ width: '18rem', height: '528px' }}>
+                <Card.Img variant="top" src={`data:image/jpeg;base64,${res.imagem}`} width="170px" height="250px" />
+                <Card.Body style={{ display: 'flex', flexDirection: "column", justifyContent: 'space-between' }}>
+
+
+                  <Card.Text style={{ fontSize: '14px' }}>
+                    <Card.Title>{res.nome}</Card.Title>
+                    {res.descricao}
+                  </Card.Text>
+
+                  <Card.Text>
+                    <h2>R${res.valorUnitario}</h2>
+                    <Button style={{ marginTop: '10px', width: '100%' }} variant="primary">Adicionar ao carrinho</Button>
+                  </Card.Text>
+
+                </Card.Body>
+              </Card>
+            </div>
+          )
+        })}
+        <Footer />
       </Styles.Content>
 
-     
+
     </>
   );
 }
