@@ -4,6 +4,7 @@ export const Banner = styled.div`
   width: 100%;
   height: 500px;
   background-color: black;
+  padding-top: 30px;
 `;
 
 export const Content = styled.div`

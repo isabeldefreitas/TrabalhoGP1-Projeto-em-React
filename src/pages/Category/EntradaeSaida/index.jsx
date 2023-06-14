@@ -6,10 +6,11 @@ import { Footer } from "../../../common/components/Footer";
 import * as Styles from "./style";
 import Card from "react-bootstrap/Card"
 import Button from "react-bootstrap/Button"
-
+import { Loader } from "../../../common/components/Loader";
 
 export function EntradaeSaida() {
   const [users, setUsers] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
   const [menuIsVisible, setMenuIsVisible] = useState(false);
 
   useEffect(() => {
@@ -21,6 +22,7 @@ export function EntradaeSaida() {
         if(d.categoria == 1 || d.categoria.idCategoria == 1){
           return d;
         }
+        setIsLoading(false);
       })
       setUsers(result);
     }
@@ -38,6 +40,7 @@ export function EntradaeSaida() {
       <Navbar funcao={handleClick} />
       
       <Styles.Content>
+      {isLoading && <Loader/>}
         {users.map((res) => {
           return (
             <div key={res.idProduto} style={{ marginTop: '20px' }}>
