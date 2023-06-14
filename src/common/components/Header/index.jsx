@@ -39,7 +39,7 @@ export const Navbar = () => {
         </Button>
       </Form>
       <Item>
-        <Link to="/">
+        <Link to="/bag">
           <BiShoppingBag />
         </Link>
       </Item>

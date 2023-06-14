@@ -64,7 +64,7 @@ export function Home() {
         {res.descricao}
         <h2>{res.valorUnitario}</h2>
         </Card.Text>
-        <Button variant="primary">Detalhes</Button>
+        <Button variant="primary">Adicionar ao carrinho</Button>
       </Card.Body>
     </Card>
     </div> )

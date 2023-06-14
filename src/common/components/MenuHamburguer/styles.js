@@ -18,6 +18,7 @@ export const Menu = styled.nav`
 `;
 
 export const Container = styled.div`
+  z-index: 1;
   background-color: #121212;
   position: fixed;
   height: 100%;
