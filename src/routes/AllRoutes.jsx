@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Home } from "../pages/Home";
-import { AddProduct } from "../pages/AddProduct";
-import { LoginCliente } from "../pages/LoginCliente";
+//import { AddProduct } from "../pages/AddProduct";
+
 
 
 export function AllRoutes() {
@@ -10,7 +10,7 @@ export function AllRoutes() {
 
       <Routes>
         <Route Component={Home} path="/" />
-        <Route Component={AddProduct} path="/teste" />
+        {/* //<Route Component={AddProduct} path="/teste" /> */}
         {/*<Route Component={LoginCliente} path="/loginCliente" />
         <Route Component={AddProduct} path="/create" />*/}
       </Routes>
