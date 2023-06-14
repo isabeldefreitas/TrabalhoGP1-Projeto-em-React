@@ -45,7 +45,7 @@ export function Home() {
         }
         {menuIsVisible && <MenuHamburguer />}
         <img
-          src="https://cdn.dooca.store/1841/files/banner-kit-gamer.jpg?v=1625321524"
+          src="https://www.tendinfo.com.br/image/cache/catalog/001%20outubro/banner%20outubro%2021%205-1920x786.jpg"
           width={"100%"}
           height={"100%"}
         />
@@ -59,10 +59,12 @@ export function Home() {
       <Card.Img variant="top" src={`data:image/jpeg;base64,${res.imagem}`} width="170px" height="110px" />
       <Card.Body>
         <Card.Title>{res.nome}</Card.Title>
+        
         <Card.Text>
         {res.descricao}
+        <h2>{res.valorUnitario}</h2>
         </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
+        <Button variant="primary">Detalhes</Button>
       </Card.Body>
     </Card>
     </div> )
