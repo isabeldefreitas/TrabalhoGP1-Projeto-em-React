@@ -11,13 +11,15 @@ export const Container = styled.div`
   z-index: 1;
 `;
 export const Logo = styled.h2`
-  color: #fff;
+  color: #bcffee;
   margin-left: 10px;
+  font-family: m;
 `;
 
 export const Item = styled.div`
-  color: #fff;
+  color: #bcffee;
   margin-right: 20px;
+  
 `;
 
 export const Input = styled.input`
@@ -42,3 +44,4 @@ export const Button = styled.button`
   align-items: center;
   cursor: pointer;
 `;
+

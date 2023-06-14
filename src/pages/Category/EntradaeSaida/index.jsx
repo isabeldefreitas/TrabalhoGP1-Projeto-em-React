@@ -6,7 +6,7 @@ import { Footer } from "../../../common/components/Footer";
 import * as Styles from "./style";
 import Card from "react-bootstrap/Card"
 import Button from "react-bootstrap/Button"
-
+import { GlobalStyle } from '../../../common/style/global';
 
 export function EntradaeSaida() {
   const [users, setUsers] = useState([]);
@@ -35,6 +35,7 @@ export function EntradaeSaida() {
 
   return (
     <>
+    <GlobalStyle/>
       <Navbar funcao={handleClick} />
       
       <Styles.Content>

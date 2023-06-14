@@ -1,6 +1,6 @@
 // import { useState } from "react";
 import * as Styles from "./styles";
-
+import { GlobalStyle } from '../../style/global';
 import { MenuItem } from './MenuItem'
 
 import { 
@@ -28,6 +28,7 @@ export const MenuHamburguer = ({ active }) => {
 
   return (
     <>
+    <GlobalStyle/>
     <Styles.Container sidebar={active}>
       <FaTimes onClick={closeMenu} />  
       <Styles.Content>

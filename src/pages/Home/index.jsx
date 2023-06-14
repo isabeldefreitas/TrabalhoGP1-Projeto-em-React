@@ -7,7 +7,7 @@ import { MenuHamburguer } from "../../common/components/MenuHamburguer";
 import * as Styles from "./style";
 import Card from "react-bootstrap/Card"
 import Button from "react-bootstrap/Button"
-
+import { GlobalStyle } from '../../common/style/global';
 
 
 export function Home() {
@@ -32,17 +32,10 @@ export function Home() {
 
   return (
     <>
+      <GlobalStyle/>
       <Navbar funcao={handleClick} />
       <Styles.Banner>
-        {
-          // Ternário quando tenho 2 opçoes:
-          /* {menuIsVisible? fazSeForTrue : fazSeForFalse}  */
-        }
-
-        {
-          // Quando só faço se for true:
-          /* {menuIsVisible&&SoFazSeForTrue}  */
-        }
+        
         {menuIsVisible && <MenuHamburguer />}
         <img
           src="https://www.tendinfo.com.br/image/cache/catalog/001%20outubro/banner%20outubro%2021%205-1920x786.jpg"
