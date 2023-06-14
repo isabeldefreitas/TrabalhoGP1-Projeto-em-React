@@ -11,13 +11,13 @@ export const Container = styled.div`
   z-index: 1;
 `;
 export const Logo = styled.h2`
-  color: #bcffee;
+  color: #a838ad;
   margin-left: 10px;
   font-family: m;
 `;
 
 export const Item = styled.div`
-  color: #bcffee;
+  color: #EB77EF;
   margin-right: 20px;
   
 `;
@@ -34,8 +34,8 @@ export const Form = styled.form`
 `;
 
 export const Button = styled.button`
-  background-color: #bcffee;
-  border: 2px solid #b3e3ff;
+  background-color: #EB77EF;
+  border: 2px solid #a838ad;
   border-radius: 4px;
   color: #000;
   padding: 0.3rem;
@@ -45,3 +45,6 @@ export const Button = styled.button`
   cursor: pointer;
 `;
 
+export const a = styled.a`
+  cursor: pointer;
+`;

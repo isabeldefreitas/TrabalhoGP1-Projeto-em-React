@@ -42,16 +42,15 @@ export const Navbar = () => {
       </Form>
       <Item>
         <Link to="/bag">
-          <BiShoppingBag />
+          <BiShoppingBag size={35} />
         </Link>
       </Item>
       <Item>
       <Logo>
-        <button onClick={() => showMenu()}>
-        <Link to="/">
-          <BiMenu />
+        <Link onClick={() => showMenu()}>
+          <BiMenu size={40} />
+      
         </Link>
-        </button>
       </Logo>
       </Item>
 
