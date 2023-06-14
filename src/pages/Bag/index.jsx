@@ -1,35 +1,48 @@
-
+import { useEffect } from "react";
+import { api } from "../../services/api";
+import { useState } from "react";
+import { Navbar } from "../../common/components/Header";
+import { Footer } from "../../common/components/Footer";
+import { GlobalStyle } from '../../common/style/global';
 
 export function Bag() {
- return (
-  <h1>carrinho</h1>
-  //  <Container>
-    
-  // <Carrinho>
-  //   <header>
-  //     <div className="boxsuperior">
-  //       <img src="../../assets/img/logo-transparente.png" alt="logo"/>
-  //       <div>
-  //         <a href="../home-page/home.html">Home</a>
-  //         <a onClick="scrollToContainer()" style="cursor:pointer">Contato</a>
-  //         <a href="../carrinho/carrinho.html"><img src="../../assets/img/car-shop1.svg" alt="carrinho"/></a>
-  //       </div>
-  //     </div>
-  //   </header>
-  //   <main>
-  //     <h2 id="titulo">Carrinho</h2>
-  //     <div className="container_carrinho">
-  //       <ul>
-          
-  //       </ul>
+  const [users, setUsers] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [menuIsVisible, setMenuIsVisible] = useState(false);
+const bagItens = localStorage.getItem("bag") ? JSON.parse(localStorage.getItem("bag")) :[];
 
-  //     </div>
-  //     <div className="btn-container"><button class="btn-compra-mais">Continuar comprando</button>
-  //     <button className="btn-finalizar-compra">Finalizar compra</button></div>
-    
-  //   </main>
-  //   </Carrinho>
-  //   </Container>
-    
-     );
+  useEffect(() => {
+    async function fetchData() {
+
+      const ghUsers = await api.get("/produtos");
+      setUsers(ghUsers.data);
+      setIsLoading(false);
+    }
+
+    fetchData();
+    montaCarrinho();
+  }, []);
+  const montaCarrinho = () => {
+   bagItens.map (item => {
+      let teste = users.find(i => {
+
+      return i.idProduto === item.idProduto
+      })
+      console.log(teste)
+   })
+  }
+  const handleClick = () => {
+    console.log("Clicou");
+    setMenuIsVisible(!menuIsVisible);
+  };
+
+  return (
+    <>
+      <GlobalStyle/>
+      <Navbar funcao={handleClick} />
+
+      <Footer />
+
+    </>
+  );
 }
