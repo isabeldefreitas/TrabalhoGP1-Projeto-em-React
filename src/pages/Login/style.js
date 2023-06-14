@@ -1,36 +1,44 @@
 import styled from 'styled-components';
 
 export const Form = styled.form`
-  // Estilos para o formulário
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
   gap: 17px;
-  padding: 190px 0;
-  
-
+  padding: 280px 0;
+  border-radius: 4px;
 `;
 
 export const FormGroup = styled.div`
-  // Estilos para o grupo de formulário
+  height: 90px;
+  width: 400px;
+  max-width: 400px;
+  margin: 1rem;
+  padding: 1rem;
 `;
 
 export const Label = styled.label`
-  // Estilos para as etiquetas
+  display: block;
+  margin-bottom: 5px;
 `;
 
 export const Input = styled.input`
-  // Estilos para os campos de entrada
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 `;
 
 export const Select = styled.select`
   // Estilos para o seletor
 `;
 
-export const CheckBox = styled.input`
-  // Estilos para a caixa de seleção
-`;
-
 export const Button = styled.button`
-  // Estilos para o botão
+  width: 15%;
+  padding: 10px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
 `;

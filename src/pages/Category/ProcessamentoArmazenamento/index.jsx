@@ -6,10 +6,12 @@ import { Footer } from "../../../common/components/Footer";
 import * as Styles from "./style";
 import Card from "react-bootstrap/Card"
 import Button from "react-bootstrap/Button"
+import { Loader } from "../../../common/components/Loader";
 import { GlobalStyle } from '../../../common/style/global';
 
 export function ProcessamentoArmazenamento() {
   const [users, setUsers] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
   const [menuIsVisible, setMenuIsVisible] = useState(false);
 
   useEffect(() => {
@@ -21,6 +23,7 @@ export function ProcessamentoArmazenamento() {
         if(d.categoria == 3 || d.categoria.idCategoria == 3){
           return d;
         }
+        setIsLoading(false);
       })
       setUsers(result);
     }
@@ -39,6 +42,7 @@ export function ProcessamentoArmazenamento() {
       <Navbar funcao={handleClick} />
       
       <Styles.Content>
+      {isLoading && <Loader/>}
         {users.map((res) => {
           return (
             <div key={res.idProduto} style={{ marginTop: '20px' }}>

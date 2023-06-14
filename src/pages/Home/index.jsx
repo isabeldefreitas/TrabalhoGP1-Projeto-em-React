@@ -7,11 +7,13 @@ import { MenuHamburguer } from "../../common/components/MenuHamburguer";
 import * as Styles from "./style";
 import Card from "react-bootstrap/Card"
 import Button from "react-bootstrap/Button"
+import { Loader } from "../../common/components/Loader";
 import { GlobalStyle } from '../../common/style/global';
 
 
 export function Home() {
   const [users, setUsers] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
   const [menuIsVisible, setMenuIsVisible] = useState(false);
 
   useEffect(() => {
@@ -20,6 +22,7 @@ export function Home() {
       const ghUsers = await api.get("/produtos");
       console.log(ghUsers.data);
       setUsers(ghUsers.data);
+      setIsLoading(false);
     }
 
     fetchData();
@@ -44,6 +47,7 @@ export function Home() {
         />
       </Styles.Banner>
       <Styles.Content>
+        {isLoading && <Loader/>}
         {users.map((res) => {
           return (
             <div key={res.idProduto} style={{ marginTop: '20px' }}>
