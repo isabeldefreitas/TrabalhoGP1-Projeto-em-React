@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { BiMenu, BiMicrochip, BiSearchAlt2, BiShoppingBag } from "react-icons/bi";
-
+import { GlobalStyle } from '../../style/global';
 import { Button, Container, Form, Input, Item, Logo } from "./styles";
 
 import { MenuHamburguer } from "../MenuHamburguer";
@@ -23,6 +23,8 @@ export const Navbar = () => {
   };
 
   return (
+    <>
+    <GlobalStyle/>
     <Container>
       <Logo>
           <BiMicrochip /> HardwareTec
@@ -56,5 +58,6 @@ export const Navbar = () => {
       {menu && <MenuHamburguer active={setMenu}/>}
       {/* <Outlet /> */}
     </Container>
+    </>
   );
 };

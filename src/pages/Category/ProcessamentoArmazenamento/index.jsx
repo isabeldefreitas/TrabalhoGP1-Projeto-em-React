@@ -7,6 +7,7 @@ import * as Styles from "./style";
 import Card from "react-bootstrap/Card"
 import Button from "react-bootstrap/Button"
 import { Loader } from "../../../common/components/Loader";
+import { GlobalStyle } from '../../../common/style/global';
 
 export function ProcessamentoArmazenamento() {
   const [users, setUsers] = useState([]);
@@ -37,6 +38,7 @@ export function ProcessamentoArmazenamento() {
 
   return (
     <>
+    <GlobalStyle/>
       <Navbar funcao={handleClick} />
       
       <Styles.Content>
