@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { BiMenu, BiMicrochip, BiSearchAlt2, BiShoppingBag } from "react-icons/bi";
 import { GlobalStyle } from '../../style/global';
 import { Button, Container, Form, Input, Item, Logo } from "./styles";
+import { Search } from "../../components/Search";
 
 import { MenuHamburguer } from "../MenuHamburguer";
 
@@ -30,11 +31,11 @@ export const Navbar = () => {
           <BiMicrochip /> HardwareTec
       </Logo>
       <Form onSubmit={handleSubmit}>
-        <Input
-          type="text"
-          placeholder="Busque um produto"
-          onChange={(e) => setSearch(e.target.value)}
-          value={search}
+        <Search
+          // type="text"
+          // placeholder="Busque um produto"
+          // onChange={(e) => setSearch(e.target.value)}
+          // value={search}
         />
         <Button type="submit">
           <BiSearchAlt2 />
@@ -56,6 +57,7 @@ export const Navbar = () => {
 
       {menu && <MenuHamburguer active={setMenu}/>}
       {/* <Outlet /> */}
+
     </Container>
     </>
   );
