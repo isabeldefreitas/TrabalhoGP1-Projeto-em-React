@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { BiMenu, BiMicrochip, BiSearchAlt2, BiShoppingBag } from "react-icons/bi";
 import { GlobalStyle } from '../../style/global';
 import { Button, Container, Form, Input, Item, Logo } from "./styles";
+import { Saudacao } from "./styles";
 //import { useProducts } from "../../../hooks/useProducts";
 //import { Search } from "../../components/Search";
 
