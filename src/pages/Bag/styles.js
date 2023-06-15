@@ -26,12 +26,17 @@ export const Content = styled.div`
   justify-content: center;
   gap: 15px;
   flex-wrap: wrap;
-  
 `;
 
 export const Button = styled.button`
-width: 200px;
-height: 50px;
-border-radius: 10px;
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: #9370DB;
+  color: white;
+`;
 
+export const Total = styled.p`
+  font-size: x-large;
+  font-weight: bold;
 `;

@@ -13,23 +13,19 @@ import { Link } from 'react-router-dom'
 import { useProducts } from "../../hooks/useProducts";
 
 export function Home() {
-  // const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [menuIsVisible, setMenuIsVisible] = useState(false);
   const [bagList, setBagList] = useState([]);
   const { filteredProducts, products } = useProducts()
 
-  // useEffect(() => {
-  //   async function fetchData() {
-  //     const response = await api.get("/produtos");
-  //     setProducts(response.data);
-  //     setIsLoading(false);
-  //   }
 
-  //   fetchData();
-  // }, []);
   useEffect(() => {
-    localStorage.setItem("bag", JSON.stringify(bagList));
+    const bagItens = JSON.parse(localStorage.getItem("bag"));
+    if(bagItens.length > 0 && bagList.length == 0){
+      setBagList(bagItens)
+    }else {
+      localStorage.setItem("bag", JSON.stringify(bagList));
+    }
   }, [bagList]);
 
   const handleClick = () => {

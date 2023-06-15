@@ -40,7 +40,9 @@ export function Bag() {
   };
 
   const handleFinishPurchase = () => {
-    alert(`COMPRA FINALIZADA COM SUCESSO. Valor total:`+ total)
+    alert(`COMPRA FINALIZADA COM SUCESSO. 
+
+    Valor total: ` + total)
     setBagItens([])
     localStorage.setItem("bag", JSON.stringify([]))
   }
@@ -97,7 +99,7 @@ export function Bag() {
             })}
 
           </Styles.Content>
-          <p>{total}</p>
+          <Styles.Total>Total dos produtos: {total}</Styles.Total>
           <Styles.Button onClick={() => handleFinishPurchase()}>Finalize sua compra</Styles.Button>
         </div>
       ) : (
