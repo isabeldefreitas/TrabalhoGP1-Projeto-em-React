@@ -26,4 +26,12 @@ export const Content = styled.div`
   justify-content: center;
   gap: 15px;
   flex-wrap: wrap;
+  
+`;
+
+export const Button = styled.button`
+width: 200px;
+height: 50px;
+border-radius: 10px;
+
 `;

@@ -35,6 +35,7 @@ export function Bag() {
       <Navbar funcao={handleClick} />
 
       {bagItens?.length >= 1 ? (
+        <div style = {{display:'flex', flexDirection:'column', width: '100%', alignItems: 'center'}}>
         <Styles.Content>
           {bagItens?.map((product) => {
             return (
@@ -78,7 +79,10 @@ export function Bag() {
               </div>
             );
           })}
+          
         </Styles.Content>
+        <Styles.Button>Finalize sua compra</Styles.Button>
+        </div>
       ) : (
         <Styles.Message>
           Poxa, {username} ! Você ainda não adicionou nenhum item ao carrinho!
