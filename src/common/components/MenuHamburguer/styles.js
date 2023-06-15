@@ -52,4 +52,21 @@ export const Content = styled.div`
   margin-top: 100px;
 `;
 
+export const ItemLogout = styled.div`
+  display: flex;
+  align-items: center;
+  background-color: #595959; 
+  font-size: 20px;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  margin: 0 15px 20px;
+  > svg {
+    margin: 0 20px;
+  }
+  &:hover {
+    background-color: black;
+  }
+`;
 

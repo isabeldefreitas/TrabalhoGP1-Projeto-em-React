@@ -8,23 +8,30 @@ import {
   FaHome,
   FaUserInjured,
   FaMouse,
-  FaLaptop
-} from 'react-icons/fa'
+  FaLaptop,
+  FaPowerOff,
+  
+} from 'react-icons/fa';
 
 export const MenuHamburguer = ({ active }) => {
 
   const closeMenu = () => {
-    active(false)
-  }
+    active(false);
+  };
 
   const menuOptions = [
 
     {icon: FaHome, name: "Home", LinkToPath: "/"},
     {icon: FaUserInjured, name: "Login", LinkToPath: "/login"},
     {icon: FaMouse, name: "Entrada e saída", LinkToPath: "/entradaesaida"},
-    {icon: FaLaptop, name: "Processamento", LinkToPath: "/processamentoarmazenamento"},
+    {
+      icon: FaLaptop,
+      name: "Processamento",
+      LinkToPath: "/processamentoarmazenamento",
+    },
+    { icon: FaPowerOff, name: "Logout" },
     
-  ]
+  ];
 
   return (
     <>
@@ -33,8 +40,14 @@ export const MenuHamburguer = ({ active }) => {
       <FaTimes onClick={closeMenu} />  
       <Styles.Content>
         {menuOptions.map((opt) => {
-          return <MenuItem Icon={opt.icon} Text={opt.name} LinkToPath={opt.LinkToPath}/>
-        })}
+        return (
+          <MenuItem
+            Icon={opt.icon}
+            Text={opt.name}
+            LinkToPath={opt.LinkToPath}
+          />
+        );
+      })}
       </Styles.Content>
     </Styles.Container>
 
