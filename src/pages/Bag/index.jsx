@@ -81,8 +81,8 @@ export function Bag() {
         </Styles.Content>
       ) : (
         <Styles.Message>
-          Poxa, {username} ! Você ainda não adicionou nenhum item à bag de
-          compras!
+          Poxa, {username} ! Você ainda não adicionou nenhum item ao carrinho!
+          
         </Styles.Message>
       )}
       <Footer />
