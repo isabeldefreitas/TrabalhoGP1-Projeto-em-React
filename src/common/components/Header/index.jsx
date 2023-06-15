@@ -8,11 +8,13 @@ import { Saudacao } from "./styles";
 //import { Search } from "../../components/Search";
 
 import { MenuHamburguer } from "../MenuHamburguer";
+import { useProducts } from "../../../hooks/useProducts";
 
 export const Navbar = () => {
   const [search, setSearch] = useState("");
+  const [username, setUsername] = useState("");
   const [menu, setMenu] = useState(false)
-  //const { products, setFilteredProducts } = useProducts()
+  const { products, setFilteredProducts } = useProducts()
   const showMenu = () => setMenu(!menu)
   const navigate = useNavigate();
 
@@ -42,7 +44,7 @@ export const Navbar = () => {
           <Input
             type="text"
             placeholder="Busque um produto"
-          //onChange={(e) => setFilteredProducts(products.filter(product => product.nome.toLowerCase().includes(e.target.value.toLowerCase())))}
+            onChange={(e) => setFilteredProducts(products.filter(product => product.nome.toLowerCase().includes(e.target.value.toLowerCase())))}
           />
           <Button type="submit">
             <BiSearchAlt2 />
