@@ -31,37 +31,37 @@ export const Navbar = () => {
 
   return (
     <>
-    <GlobalStyle />
-    <Container>
-      <Logo>
-        <BiMicrochip /> HardwareTec
-      </Logo>
-      <Saudacao>{username ? "Olá, " + username : "Faça o login"}</Saudacao>
-      <Form onSubmit={handleSubmit}>
-        <Input
-          type="text"
-          placeholder="Busque um produto"
-          //onChange={(e) => setFilteredProducts(products.filter(product => product.nome.toLowerCase().includes(e.target.value.toLowerCase())))}
-        />
-        <Button type="submit">
-          <BiSearchAlt2 />
-        </Button>
-      </Form>
-      <Item>
-        <Link to="/bag">
-          <BiShoppingBag size={35} />
-        </Link>
-      </Item>
-      <Item>
+      <GlobalStyle />
+      <Container>
         <Logo>
-          <Link onClick={() => showMenu()}>
-            <BiMenu size={40} />
-          </Link>
+          <BiMicrochip /> HardwareTec
         </Logo>
-      </Item>
+        <Saudacao>{username ? "Olá, " + username : "Faça o login"}</Saudacao>
+        <Form onSubmit={handleSubmit}>
+          <Input
+            type="text"
+            placeholder="Busque um produto"
+          //onChange={(e) => setFilteredProducts(products.filter(product => product.nome.toLowerCase().includes(e.target.value.toLowerCase())))}
+          />
+          <Button type="submit">
+            <BiSearchAlt2 />
+          </Button>
+        </Form>
+        <Item>
+          <Link to="/bag">
+            <BiShoppingBag size={35} />
+          </Link>
+        </Item>
+        <Item>
+          <Logo>
+            <Link onClick={() => showMenu()}>
+              <BiMenu size={40} />
+            </Link>
+          </Logo>
+        </Item>
 
-      {menu && <MenuHamburguer active={setMenu} />}
-    </Container>
-  </>
+        {menu && <MenuHamburguer active={setMenu} />}
+      </Container>
+    </>
   );
 };
