@@ -12,8 +12,7 @@ export const Banner = styled.div`
 
   @media (max-width: 768px) {
     height: 300px;
-    padding-top: 15px;
-    
+    padding-top: 15px; 
   }
 `;
 

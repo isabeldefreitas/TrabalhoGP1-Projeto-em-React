@@ -1,44 +1,54 @@
+import * as Styles from "./style";
+import Card from "react-bootstrap/Card"
+import Button from "react-bootstrap/Button";
 import { useEffect } from "react";
 import { api } from "../../services/api";
 import { useState } from "react";
 import { Navbar } from "../../common/components/Header";
 import { Footer } from "../../common/components/Footer";
 import { MenuHamburguer } from "../../common/components/MenuHamburguer";
-import * as Styles from "./style";
-import Card from "react-bootstrap/Card"
-import Button from "react-bootstrap/Button"
 import { Loader } from "../../common/components/Loader";
 import { GlobalStyle } from '../../common/style/global';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 export function Home() {
-  const [users, setUsers] = useState([]);
+  const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [menuIsVisible, setMenuIsVisible] = useState(false);
+  const [bagList, setBagList] = useState([]);
 
   useEffect(() => {
     async function fetchData() {
-
-      const ghUsers = await api.get("/produtos");
-      console.log(ghUsers.data);
-      setUsers(ghUsers.data);
+      const response = await api.get("/produtos");
+      setProducts(response.data);
       setIsLoading(false);
     }
 
     fetchData();
   }, []);
+  useEffect(() => {
+    localStorage.setItem("bag", JSON.stringify(bagList));
+  }, [bagList]);
 
   const handleClick = () => {
-    console.log("Clicou");
     setMenuIsVisible(!menuIsVisible);
+  };
+
+  const handleAddBag = (product) => {
+    bagList?.some((produto) => produto.idProduto === product.idProduto)
+      ? alert("Produto já adicionado ao carrinho")
+      : setBagList(
+        [...bagList, product],
+        alert("Produto adicionado ao carrinho com sucesso!")
+      );
   };
 
   return (
     <>
-      <GlobalStyle/>
+      <GlobalStyle />
       <Navbar funcao={handleClick} />
       <Styles.Banner>
-        
+
         {menuIsVisible && <MenuHamburguer />}
         <img
           src="https://www.tendinfo.com.br/image/cache/catalog/001%20outubro/banner%20outubro%2021%205-1920x786.jpg"
@@ -47,13 +57,23 @@ export function Home() {
         />
       </Styles.Banner>
       <Styles.Content>
-        {isLoading && <Loader/>}
-        {users.map((res) => {
+        {isLoading && <Loader />}
+        {products.map((res) => {
           return (
             <div key={res.idProduto} style={{ marginTop: '20px' }}>
               <Card style={{ width: '18rem', height: '528px' }}>
-                <Card.Img variant="top" src={`data:image/jpeg;base64,${res.imagem}`} width="170px" height="250px" />
-                <Card.Body style={{ display: 'flex', flexDirection: "column", justifyContent: 'space-between' }}>
+                <Card.Img
+                  variant="top"
+                  src={`data:image/jpeg;base64,${res.imagem}`}
+                  width="170px"
+                  height="250px"
+                />
+
+                <Card.Body style={{
+                  display: 'flex',
+                  flexDirection: "column",
+                  justifyContent: 'space-between',
+                }}>
 
 
                   <Card.Text style={{ fontSize: '14px' }}>
@@ -64,9 +84,17 @@ export function Home() {
                   <Card.Text>
                     <h2>R${res.valorUnitario}</h2>
                     <Link to="/bag">
-                    <Button style={{ marginTop: '10px', width: '100%', backgroundColor: '#9370DB ', border: '#9370DB' }} variant="primary">Adicionar ao carrinho</Button>
+                      <Button style={{
+                        marginTop: '10px',
+                        width: '100%',
+                        backgroundColor: '#9370DB ',
+                        border: '#9370DB'
+                      }}
+                        variant="primary"
+                        onClick={() => handleAddBag(res)}
+                      >Adicionar ao carrinho</Button>
                     </Link>
-                    
+
                   </Card.Text>
 
                 </Card.Body>
@@ -76,7 +104,6 @@ export function Home() {
         })}
       </Styles.Content>
       <Footer />
-
     </>
   );
 }
