@@ -6,7 +6,6 @@ export const Container = styled.div`
   background-color: #121212;
   color: #fff;
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
   align-items: center;
   padding: 50px;
@@ -21,9 +20,10 @@ export const Container = styled.div`
 `;
 
 export const Participantes = styled.div`
-  display: flex;
-  flex-direction: column;
 
+  flex-direction: column;
+  text-decoration: underline;
+  
   img {
     width: 50px;
     background: rgba(255, 255, 255, 0.767);

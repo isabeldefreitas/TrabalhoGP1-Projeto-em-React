@@ -25,7 +25,6 @@ export const GlobalStyle = createGlobalStyle`
     color: inherit;
   }
 
-
   grid-template-columns: repeat(5, 1fr);
 
  
