@@ -37,6 +37,12 @@ export const Item = styled.div`
   }
 `;
 
+export const Saudacao = styled.div`
+  color: #EB77EF;
+  margin-right: 20px;
+  
+`;
+
 export const Input = styled.input`
   padding: 0.2rem 0.8rem;
   border-radius: 4px;
